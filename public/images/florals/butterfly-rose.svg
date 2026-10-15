@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 80" fill="none">
+  <g opacity="0.9">
+    <!-- Left Forewing -->
+    <path d="M50 38 C42 20 22 8 8 20 C-2 30 8 50 48 40 Z" fill="#D7AAA6" fill-opacity="0.25" stroke="#D7AAA6" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M48 38 C38 26 25 18 15 24 C10 28 18 42 46 39 Z" fill="#D7AAA6" fill-opacity="0.4"/>
+    <!-- Left Hindwing -->
+    <path d="M48 41 C40 50 20 62 15 52 C10 42 32 38 48 41 Z" fill="#D7AAA6" fill-opacity="0.3" stroke="#D7AAA6" stroke-width="1.2"/>
+    <!-- Right Forewing -->
+    <path d="M50 38 C58 20 78 8 92 20 C102 30 92 50 52 40 Z" fill="#D7AAA6" fill-opacity="0.25" stroke="#D7AAA6" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M52 38 C62 26 75 18 85 24 C90 28 82 42 54 39 Z" fill="#D7AAA6" fill-opacity="0.4"/>
+    <!-- Right Hindwing -->
+    <path d="M52 41 C60 50 80 62 85 52 C90 42 68 38 52 41 Z" fill="#D7AAA6" fill-opacity="0.3" stroke="#D7AAA6" stroke-width="1.2"/>
+    <!-- Antennae -->
+    <path d="M49 32 Q45 22 40 20" stroke="#D7AAA6" stroke-width="0.9" stroke-linecap="round"/>
+    <path d="M51 32 Q55 22 60 20" stroke="#D7AAA6" stroke-width="0.9" stroke-linecap="round"/>
+    <circle cx="40" cy="20" r="1.2" fill="#D7AAA6"/>
+    <circle cx="60" cy="20" r="1.2" fill="#D7AAA6"/>
+    <!-- Body -->
+    <ellipse cx="50" cy="40" rx="1.8" ry="8" fill="#D7AAA6"/>
+  </g>
+</svg>

@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0d0b0a;
+  --foreground: #332a27;
+  --ivory: #F7F1E8;
+  --ivory-muted: #EDE5D8;
+  --sage: #A8B5A0;
+  --sage-light: #D4DDD0;
+  --sage-dark: #7B866D;
+  --rose: #D7AAA6;
+  --rose-light: #EED7D5;
+  --olive: #7B866D;
+  --brown: #332A27;
+  --brown-light: #5A4E4A;
+  --gold: #C5A66A;
+  --gold-light: #DFC896;
+  --gold-dark: #8F6F33;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ivory: var(--ivory);
+  --color-sage: var(--sage);
+  --color-rose: var(--rose);
+  --color-olive: var(--olive);
+  --color-brown: var(--brown);
+  --color-gold: var(--gold);
+  --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-editorial: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --font-script: var(--font-playfair), "Playfair Display", var(--font-cormorant), Georgia, serif;
+  --font-calligraphy: var(--font-pinyon), "Pinyon Script", cursive;
+}
+
+html {
+  background: #0d0b0a;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  min-height: 100svh;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background: #0d0b0a;
+  color: var(--foreground);
+  font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  touch-action: manipulation;
+  -webkit-font-smoothing: antialiased;
+}
+
+#hero-placeholder {
+  display: none;
+}
+
+/* Luxury Editorial Card Gold Sheen */
+.card-gold-sheen {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-gold-sheen::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 60%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 0%,
+    rgba(223, 200, 150, 0.08) 40%,
+    rgba(255, 255, 255, 0.22) 50%,
+    rgba(223, 200, 150, 0.08) 60%,
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+  animation: goldSheenPass 8s ease-in-out infinite;
+}
+
+@keyframes goldSheenPass {
+  0%, 70% {
+    transform: translateX(-150%) rotate(25deg);
+  }
+  100% {
+    transform: translateX(400%) rotate(25deg);
+  }
+}
+
+/* Pinterest-Style Romantic Editorial Accent */
+.script-float {
+  font-family: var(--font-playfair), var(--font-cormorant), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  animation: floatingScript 4.5s ease-in-out infinite;
+}
+
+@keyframes floatingScript {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-3px) rotate(-0.3deg);
+  }
+}
+
+/* Countdown Heartbeat Glow */
+.countdown-heartbeat {
+  animation: countdownPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes countdownPulse {
+  0%, 100% {
+    box-shadow: 0 2px 8px rgba(51, 42, 39, 0.06);
+    border-color: rgba(197, 166, 106, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 14px rgba(197, 166, 106, 0.28);
+    border-color: rgba(197, 166, 106, 0.65);
+  }
+}
+
+/* Editorial Hover Card Elevation */
+.editorial-hover-card {
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+}
+.editorial-hover-card:hover {
+  transform: translateY(-3px) scale(1.006);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.45), 0 0 24px rgba(197, 166, 106, 0.18);
+}
+
+/* Moving Gold Shimmer Hairline Border */
+.gold-shimmer-border {
+  background: linear-gradient(90deg, #c5a66a, #fffdf9, #c5a66a, #8f6f33, #c5a66a);
+  background-size: 300% 100%;
+  animation: shimmerMove 7s linear infinite;
+}
+
+@keyframes shimmerMove {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 300% 0%; }
+}
+
+/* Cinematic Lens Flare / Soft God-Ray Aura */
+.cinematic-glow-aura {
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(223, 200, 150, 0.18) 0%,
+    rgba(197, 166, 106, 0.08) 40%,
+    transparent 75%
+  );
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  .card-gold-sheen::after,
+  .script-float,
+  .countdown-heartbeat,
+  .gold-shimmer-border {
+    animation: none !important;
+  }
+  .editorial-hover-card:hover {
+    transform: none !important;
+  }
+}

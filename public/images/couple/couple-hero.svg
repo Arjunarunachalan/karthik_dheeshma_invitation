@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F2E6D8"/>
+      <stop offset="40%" stop-color="#EED7D5"/>
+      <stop offset="70%" stop-color="#DFC896"/>
+      <stop offset="100%" stop-color="#D4DDD0"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="45%" r="35%">
+      <stop offset="0%" stop-color="#FFFDF9" stop-opacity="0.85"/>
+      <stop offset="40%" stop-color="#DFC896" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#DFC896" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="filmGrain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" result="noise"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.2  0 0 0 0 0.18  0 0 0 0 0.16  0 0 0 0.05 0"/>
+      <feBlend mode="multiply" in="SourceGraphic" in2="noise"/>
+    </filter>
+    <clipPath id="archClip">
+      <path d="M30 300 C30 150 150 30 300 30 C450 30 570 150 570 300 L570 770 L30 770 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="600" height="800" fill="#F7F1E8"/>
+
+  <!-- Arch Frame Container -->
+  <g clip-path="url(#archClip)" filter="url(#filmGrain)">
+    <!-- Sky & Warm Sunset Glow -->
+    <rect x="0" y="0" width="600" height="800" fill="url(#skyGrad)"/>
+    <circle cx="300" cy="400" r="220" fill="url(#sunGlow)"/>
+
+    <!-- Subtle Palm / Botanical Silhouettes in Distance -->
+    <path d="M-20 600 Q120 480 200 520 Q260 550 320 600 Z" fill="#7B866D" opacity="0.25"/>
+    <path d="M620 580 Q480 460 380 510 Q320 540 280 600 Z" fill="#7B866D" opacity="0.25"/>
+    
+    <!-- Gentle Hills Horizon -->
+    <path d="M0 620 C180 580 380 640 600 610 L600 800 L0 800 Z" fill="#A8B5A0" opacity="0.4"/>
+    <path d="M0 660 C220 630 420 670 600 640 L600 800 L0 800 Z" fill="#7B866D" opacity="0.5"/>
+
+    <!-- Romantic Couple Silhouette (Groom & Bride facing each other) -->
+    <g transform="translate(140, 310)" fill="#332A27">
+      <!-- Groom silhouette -->
+      <circle cx="100" cy="70" r="24"/>
+      <!-- Groom collar & suit -->
+      <path d="M72 100 C75 90 95 86 100 86 C105 86 125 90 128 100 L135 240 L65 240 Z"/>
+      <!-- Groom arms leaning toward bride -->
+      <path d="M125 108 C140 135 155 160 170 180 L158 185 C145 168 132 145 120 120 Z"/>
+
+      <!-- Bride silhouette -->
+      <circle cx="215" cy="85" r="21"/>
+      <!-- Bride elegant traditional bun & veil drape -->
+      <ellipse cx="232" cy="80" rx="9" ry="12"/>
+      <path d="M232 85 C248 110 260 180 270 280 L230 280 C230 210 225 130 220 100 Z" fill="#D7AAA6" opacity="0.35"/>
+      <!-- Bride saree/gown drape -->
+      <path d="M195 110 C205 100 225 100 232 110 L250 280 L170 280 Z"/>
+      <!-- Bride arm meeting groom -->
+      <path d="M195 118 C180 145 170 165 165 180 L175 185 C180 170 190 150 202 128 Z"/>
+
+      <!-- Joined hands with warm halo -->
+      <circle cx="166" cy="182" r="10" fill="#DFC896" opacity="0.6"/>
+    </g>
+
+    <!-- Foreground Soft Florals -->
+    <path d="M10 770 Q60 700 80 660 Q90 690 110 770 Z" fill="#7B866D" opacity="0.6"/>
+    <path d="M590 770 Q540 700 520 660 Q510 690 490 770 Z" fill="#7B866D" opacity="0.6"/>
+    <circle cx="85" cy="670" r="12" fill="#D7AAA6" opacity="0.8"/>
+    <circle cx="515" cy="670" r="12" fill="#D7AAA6" opacity="0.8"/>
+  </g>
+
+  <!-- Fine Arch Border in Champagne Gold -->
+  <path d="M30 300 C30 150 150 30 300 30 C450 30 570 150 570 300 L570 770 L30 770 Z" fill="none" stroke="#C5A66A" stroke-width="1.5" stroke-dasharray="4 2"/>
+  <path d="M38 304 C38 158 154 38 300 38 C446 38 562 158 562 304 L562 762 L38 762 Z" fill="none" stroke="#C5A66A" stroke-width="0.5" opacity="0.6"/>
+
+  <!-- Editorial typography watermark -->
+  <text x="300" y="740" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="14" fill="#332A27" letter-spacing="4" opacity="0.85">KARTHIK &amp; DHEESHMA</text>
+  <text x="300" y="756" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#7B866D" letter-spacing="3" opacity="0.7">PALAKKAD • NOVEMBER 2026</text>
+</svg>

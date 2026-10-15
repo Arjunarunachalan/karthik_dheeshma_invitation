@@ -1,0 +1,66 @@
+.hero-section {
+  --ivory: #f4efe5;
+  --ivory-muted: #e8dfd0;
+  --ink: #1a1613;
+  --gold: #a88955;
+  --gold-light: #c5a869;
+  --gold-dark: #6e5527;
+  --scene-bg: #0d0b0a;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hero-section * {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Editorial vignette overlay to ensure text readability over photography */
+.hero-editorial-overlay {
+  background:
+    radial-gradient(circle at 50% 48%, rgba(13, 11, 10, 0.45) 0%, rgba(13, 11, 10, 0.82) 78%, #0d0b0a 100%),
+    linear-gradient(180deg, rgba(13, 11, 10, 0.85) 0%, rgba(13, 11, 10, 0.3) 30%, rgba(13, 11, 10, 0.45) 60%, rgba(13, 11, 10, 0.95) 100%);
+}
+
+/* Designed Editorial Portrait Fallback Composition */
+.hero-fallback-backdrop {
+  background-color: #0d0b0a;
+  background-image:
+    radial-gradient(ellipse at 50% 42%, #221b16 0%, #15110e 50%, #0d0b0a 100%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(168, 137, 85, 0.012) 0px,
+      rgba(168, 137, 85, 0.012) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(168, 137, 85, 0.01) 0px,
+      rgba(168, 137, 85, 0.01) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+}
+
+.hero-cameo-frame {
+  border: 1px solid rgba(168, 137, 85, 0.28);
+  box-shadow:
+    0 0 0 1px rgba(168, 137, 85, 0.12) inset,
+    0 24px 60px rgba(0, 0, 0, 0.7);
+}
+
+.hero-name-shadow {
+  text-shadow:
+    0 2px 18px rgba(0, 0, 0, 0.95),
+    0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.hero-subtle-shadow {
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll-arrow {
+    animation: none !important;
+  }
+}
